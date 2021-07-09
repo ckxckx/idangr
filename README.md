@@ -1,5 +1,26 @@
 # IDAngr
 
+有关修改：
+
+
+
+* 让IDAngr支持运行于python3
+* 让IDAngr指出运行于IDA ≥ 7.5
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
 <p align="center">
 <img src="http://andreafioraldi.altervista.org/idangr.png">
 </p>
