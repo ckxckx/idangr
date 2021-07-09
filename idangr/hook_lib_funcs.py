@@ -19,5 +19,5 @@ def hook_lib_funcs():
             name = idc.GetFunctionName(func)
             simproc = search_simproc(name)
             if simproc is not None:
-                print name, simproc
+                print(name, simproc)
                 project.hook_symbol(func, simproc())

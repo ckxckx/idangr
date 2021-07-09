@@ -5,7 +5,7 @@
 
 import manage
 
-print "######### IDAngr GUI #########"
+print("######### IDAngr GUI #########")
 
 def show():
     if not manage.is_initialized():

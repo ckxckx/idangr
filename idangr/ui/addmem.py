@@ -44,6 +44,7 @@ class Ui_IDAngrAddMem(object):
 
     def retranslateUi(self, IDAngrAddMem):
         _translate = QtCore.QCoreApplication.translate
+        #ckx: 问题所在点之一
         IDAngrAddMem.setWindowTitle(_translate("IDAngrAddMem", "Add Symbolic Memory"))
         self.label.setText(_translate("IDAngrAddMem", "Address:"))
         self.label_2.setText(_translate("IDAngrAddMem", "Length:"))
