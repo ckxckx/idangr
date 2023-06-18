@@ -708,13 +708,13 @@ class IDAngrPanelForm(PluginForm):
         """Creates the form is not created or focuses it if it was"""
         return PluginForm.Show(self,
                                "IDAngr Panel",
-                               options = (PluginForm.WOPN_TAB | PluginForm.WCLS_CLOSE_LATER))
+                               options = (PluginForm.FORM_TAB | PluginForm.FORM_CLOSE_LATER))
 
 
 
 
 class IDAngrActionHandler(idaapi.action_handler_t):
-    # ckx：问题所在
+
     def __init__(self, action):
         idaapi.action_handler_t.__init__(self)
         self.action = action

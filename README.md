@@ -5,7 +5,15 @@
 
 
 * 让IDAngr支持运行于python3
-* 让IDAngr指出运行于IDA ≥ 7.5
+* 让IDAngr支持运行于IDA ≥ 7.5
+
+
+
+安装方法：
+
+将 项目中的 idangr 目录以及 idangr_plugin.py 复制到目录 ~/.idapro/plugins 下
+
+
 
 
 

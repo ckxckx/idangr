@@ -3,13 +3,15 @@
 # License: BSD 2-Clause                              #
 ######################################################
 
-# from ckx import ckxval
-
 import sys
+import os
 
-# sys.path.append("C:\ckx\idapro\plugins\idangr")
+# sys.sys.executable
 
-sys.path.append("/Applications/IDA Pro 7.5/ida64.app/Contents/MacOS/plugins/idangr/")
+# sys.executable
+sys.path.append("/Users/puck/.idapro/plugins/idangr")
+sys.path.append(os.path.join(os.path.dirname(sys.executable),"python/3"))
 
-from .manage import AngrDbgNotInstalled, remote, init, serve_all, close, has_modules, is_initialized
-from .hook_lib_funcs import hook_lib_funcs
+
+from manage import AngrDbgNotInstalled, remote, init, serve_all, close, has_modules, is_initialized
+from hook_lib_funcs import hook_lib_funcs

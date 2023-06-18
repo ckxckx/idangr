@@ -112,12 +112,8 @@ class IdaDebugger(object):
     
     @idawrite
     def put_bytes(self, addr, value):
-        print("ckx...")
-        print(value)
-        for i in range(len(value)):
-            # idc.patch_dbg_byte(addr +i, ord(value[i]))
-            idc.patch_dbg_byte(addr +i, value[i])
-
+        for i in xrange(len(value)):
+            idc.patch_dbg_byte(addr +i, ord(value[i]))
     
     #-------------------------------------
     def get_reg(self, name):
@@ -197,7 +193,7 @@ class IdaPinDebugger(IdaDebugger):
         self.vmmap = None
     
     def _get_vmmap_from_pid(self):
-        print("IDANGR+PIN WARNING: cannot retrieve the vmmap from the pintool, opening the process using the PID (works only when IDA is in the same machine).")
+        print ("IDANGR+PIN WARNING: cannot retrieve the vmmap from the pintool, opening the process using the PID (works only when IDA is in the same machine).")
         if os.name == 'nt':
             import win_vmmap
             pid = int(idc.send_dbg_command("getpid"))
@@ -214,7 +210,7 @@ class IdaPinDebugger(IdaDebugger):
                 except:
                     pass
             if len(self.vmmap) == 0:
-                print( "IDANGR+PIN WARNING: problably you are not running IDA Pro as ADMIN and so IDAngr is not able to retrieve information about the memory layout. In such case IDAngr is not guarateed to work.")
+                print ("IDANGR+PIN WARNING: problably you are not running IDA Pro as ADMIN and so IDAngr is not able to retrieve information about the memory layout. In such case IDAngr is not guarateed to work.")
         else:
             pid = int(idc.send_dbg_command("getpid"))
             self.vmmap = []
@@ -247,7 +243,7 @@ class IdaPinDebugger(IdaDebugger):
             try:
                 self._get_vmmap_from_pid()
             except:
-                print( "IDANGR+PIN WARNING: IDAngr is not able to retrieve information about the memory layout. In such case IDAngr is not guarateed to work.")
+                print ("IDANGR+PIN WARNING: IDAngr is not able to retrieve information about the memory layout. In such case IDAngr is not guarateed to work.")
                 self.vmmap = []
             
     def before_stateshot(self):

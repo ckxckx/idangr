@@ -77,4 +77,4 @@ if __name__ == "__main__":
     import sys
     import json
     m = vmmap(int(sys.argv[1]), sys.argv[2] == "True")
-    print(json.dumps(m))
+    print (json.dumps(m))

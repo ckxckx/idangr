@@ -4,6 +4,9 @@
 ######################################################
 
 
+import idaapi
+
+
 class IDAngrPlugin(idaapi.plugin_t):
     flags = idaapi.PLUGIN_KEEP
     comment = ""

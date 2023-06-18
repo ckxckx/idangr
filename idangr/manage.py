@@ -139,7 +139,7 @@ def init(is_remote=False, host="localhost", port=DEFAULT_SERVER_PORT, use_pin=Fa
     sys.modules["pyvex"] = get_pyvex()
     sys.modules["angrdbg"] = get_angrdbg()
 
-    from .ida_debugger import register
+    from ida_debugger import register
     register(_conn, use_pin)
     
     if is_remote:
@@ -162,7 +162,7 @@ def remote_eval(code):
 def serve_all():
     global _conn
     if not _is_remote:
-        print("Not remote...")
+        print ("Not remote...")
     else:
         _conn[1].serve_all()
     
